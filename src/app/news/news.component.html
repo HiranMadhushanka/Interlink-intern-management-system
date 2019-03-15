@@ -1,0 +1,23 @@
+
+<div class="hasanga" *ngFor="let article1 of articles" >
+  <mdb-card>
+    <div class="hasanga1">
+      <h4><b><span style="color:rgb(16, 167, 255); text-align:center;">{{article1.title}}</span></b></h4>
+      <mdb-card-img src={{article1.urlToImage}} alt="Card image cap"></mdb-card-img>
+      <br>
+      
+        <h5><b><span style="color:rgb(138, 153, 161); text-align:center;"> {{article1.description}}</span></b></h5>
+        
+       
+        <h6><b><i class="fa fa-user" aria-hidden="true"></i> Author : <span style="color:rgb(255, 138, 5);">{{article1.author}}</span></b></h6>
+    <h6><i class="fa fa-book" aria-hidden="true"></i> <b> Source : </b> <b><span style="color:rgb(255, 138, 5);">  {{article1.source.name}}</span></b></h6>
+    <a href={{article1.url}} target="_blank">Click here to see more...</a>
+    <!-- <h6>{{noticee.datetime}}</h6> -->
+    
+   
+    
+    <!-- <h4><b>{{noticee.topic}}</b></h4> -->
+  </div>
+  </mdb-card>
+  <br>
+  </div>

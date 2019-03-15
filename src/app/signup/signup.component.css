@@ -1,0 +1,55 @@
+/* input.ng-invalid.ng-dirty{
+    border-bottom-color:red;
+    box-shadow: 1px 1px 1px 1px red;
+}.container{
+    padding-top: 100px;
+} */
+
+
+/* input.ng-invalid.ng-dirty{
+    border-bottom-color:red;
+    box-shadow: 1px 1px 1px 1px red;
+} */
+
+.card {
+  background-color: rgba(229, 228, 255, 0.2);
+  /* height: 90hv; */
+/* //  width: 60%; */
+/* display: block;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
+justify-content: center ;
+display: flex;
+align-items: center; */
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40%;
+
+
+}
+
+.md-form .prefix {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.md-form label {
+  color: #ffffff;
+}
+h6 {
+  line-height: 1.7;
+}
+@media (max-width: 740px) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 1040px;
+  }
+}
+
+/* .form-control{
+  color: #ffffff;
+}
+ */

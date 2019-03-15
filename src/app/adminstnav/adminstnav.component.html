@@ -1,0 +1,39 @@
+<mat-tab-group *ngIf="ifAdmin">
+
+  
+    <mat-tab label="profile">
+      <app-myprofile></app-myprofile>
+    </mat-tab>
+    <mat-tab label="Review">
+      <app-edit-details></app-edit-details>
+    </mat-tab>
+    <!-- <mat-tab label="Assign Projects">
+      <app-projects></app-projects>
+    </mat-tab> -->
+    <!-- <mat-tab label="Edit Details" ><app-edit-details></app-edit-details></mat-tab>  -->
+    <mat-tab label="Recommend">
+      <app-recommend></app-recommend>
+    </mat-tab>
+    <mat-tab label="Certificate">
+      <app-projects></app-projects>
+    </mat-tab>
+
+ 
+</mat-tab-group>
+
+<mat-tab-group *ngIf="ifSupervisor">
+
+  
+  <mat-tab label="profile">
+    <app-myprofile></app-myprofile>
+  </mat-tab>
+  <mat-tab label="Review">
+    <app-edit-details></app-edit-details>
+  </mat-tab>
+  
+  <mat-tab label="Recommend">
+    <app-recommend></app-recommend>
+  </mat-tab>
+  
+
+</mat-tab-group>

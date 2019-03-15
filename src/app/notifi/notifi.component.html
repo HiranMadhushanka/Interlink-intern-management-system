@@ -1,0 +1,35 @@
+
+<div class="abc">
+
+
+<div id="content" #content>
+  <table class="table table-hover mytable "   mdbTable>
+    <thead class="black white-text">
+        <tr>
+          <th>Student id</th>
+          <th>Technology</th>
+          <th></th>
+          <th></th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tech of techno">
+        <td>{{tech.name}}</td>
+        <td>{{tech.technology}}</td>
+        <td>
+          <form class="x"  (ngSubmit)="Approve(tech.id)" #formone="ngForm">
+            <button type="submit" class="btn btn-default">Approve</button>
+           </form>
+          </td> 
+          <td>
+              <form class="x"  (ngSubmit)="Delete(tech.id)" #formtwo="ngForm">
+                <button type="submit" class="btn btn-default">Reject</button>
+               </form>
+              </td> 
+    </tr>
+    </tbody>
+    
+  </table>
+  
+  
+</div></div>

@@ -1,0 +1,115 @@
+<mat-sidenav-container class="abc">
+  <mat-sidenav #sidenav mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true"
+    (mouseenter)="increase()" (mouseleave)="decrease()">
+
+    <mat-nav-list>
+
+      <mat-list-item>
+
+      </mat-list-item>
+      <mat-list-item>
+
+      </mat-list-item>
+      <mat-list-item *ngIf="sidenavWidth > 6">
+        <!-- <div><img height="200px" width="200px" alt="https://www.zustonline.com/images/profile_pic.png" src={{url}}></div> -->
+
+        <div class="item">
+            <img src="{{url}}">
+         </div>
+      </mat-list-item>
+      <mat-list-item routerLink="1" routerLinkActive="active">
+        <!-- <mat-icon mat-list-icon>link</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>Component 1</h5>
+          </div> -->
+      </mat-list-item>
+
+      <mat-list-item routerLink="2" routerLinkActive="active">
+        <!-- <mat-icon mat-list-icon>face</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>Component 2</h5>
+          </div> -->
+      </mat-list-item>
+
+      <mat-list-item routerLink="/student/{{id}}/myprofile"  routerLinkActive="active">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>My Profile</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/student/{{id}}/edit" routerLinkActive="active">
+        <mat-icon mat-list-icon>build</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Edit</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/student/{{id}}/recommend" routerLinkActive="active">
+        <mat-icon mat-list-icon>offline_pin</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Recommendations</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/student/{{id}}/editdetails" routerLinkActive="active">
+        <mat-icon mat-list-icon>grade</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Review</h5>
+        </div>
+      </mat-list-item>
+
+     
+      <mat-list-item routerLink="/student/{{id}}/files" routerLinkActive="active">
+        <mat-icon mat-list-icon>library_books</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>My Files</h5>
+        </div>
+      </mat-list-item>
+
+
+
+      <mat-list-item routerLink="student/{{id}}/techno" routerLinkActive="active">
+        <mat-icon mat-list-icon>device_hub</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Request Tec</h5>
+        </div>
+      </mat-list-item>
+
+
+      <mat-list-item routerLink="noticeboard" routerLinkActive="active">
+        <mat-icon mat-list-icon>receipt</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Notice Board</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="student/{{id}}/todo" routerLinkActive="active">
+        <mat-icon mat-list-icon>timeline</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>To Do</h5>
+        </div>
+      </mat-list-item>
+
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+
+</mat-sidenav-container>

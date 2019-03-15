@@ -1,0 +1,25 @@
+<table class="table table-hover mytable "  style="border:solid;border-color: teal; color:black;background-color:white" >
+  <thead class="thead-dark">
+  </thead>
+  <tbody>
+    <tr>
+      
+      <th>email</th>
+      <th>index</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let studentdetails of students; index as i">
+        <td>{{studentdetails.email}}</td>
+        <td>{{i}}</td>
+        <td>
+          <form class="btn btn-info"  (ngSubmit)="onsubmit(studentdetails.id)" #formone="ngForm">
+            <button type="submit" class="btn btn-default">Chat</button>
+           </form>
+          </td> 
+          <td>
+              
+    </tr>
+  </tbody>
+
+</table>

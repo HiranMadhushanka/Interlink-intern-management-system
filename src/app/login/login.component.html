@@ -1,0 +1,53 @@
+<!-- <div id="content" #content> -->
+  <br>
+  <h2 style="text-align:center;"> <b> Current Students In Company facultywise</b> </h2>
+  <br>
+  <div class="card-deck">
+    <mdb-card class="hasanga1">
+      <div class="canvasContainer ">
+        <canvas #canvas id="canvas" height="500" width="500">{{ chart }}</canvas>
+      </div>
+    </mdb-card>
+    <mdb-card class="hasanga">
+      <div class="canvasContainer1">
+        <canvas #canvas1 id="canvas1" height="500" width="500">{{ chart1 }}</canvas>
+      </div>
+    </mdb-card>
+
+  </div>
+
+  <br>
+  <br>
+  <h2 style="text-align:center;"> <b>Filter Using Date</b> </h2>
+  <br>
+
+
+  <mdb-card class="hasanga">
+    <div class="canvasContainer2">
+      <canvas #canvas2 id="canvas2" height="500" width="500">{{ chart2 }}</canvas>
+    </div>
+    <form (ngSubmit)=" onSubmit2(TargetDate)" #TargetDate="ngForm">
+      <div class="form-group row">
+
+        <div class="col-sm-10">
+          <h6>Enter date</h6>
+          <input type="date" name="destinationDate" ngModel required>
+          <div>
+            <div>
+              <button type="submit" class="btn btn-primary">Check Valid Students</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <br>
+
+
+
+    </form>
+  </mdb-card>
+
+
+  
+<!-- </div> -->
+<!-- <button (click)="downloadPDF()">Print</button> -->

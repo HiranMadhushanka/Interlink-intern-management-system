@@ -1,0 +1,281 @@
+<!-- 
+
+<div class="container">
+ 
+  <h2>Personal Details</h2> <br>
+
+
+  <form (ngSubmit)=" onSubmit(personal)" #personal="ngForm">
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Home Address :</label>
+      <div class="col-sm-10">
+        <div class="form-group row">
+          <div class="col-xs-2">
+
+            <input class="form-control" id="ex1" type="text" placeholder="Line 1" name="line1" ngModel required>
+          </div>
+          <div class="col-xs-3">
+
+            <input class="form-control" id="ex2" type="text" placeholder="Line 2" name="line2" ngModel required>
+          </div>
+          <div class="col-xs-4">
+
+            <input class="form-control" id="ex3" type="text" placeholder="Line 3" name="line3" ngModel required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Institute :</label>
+      <div class="col-sm-10">
+        <select id="institute1" name="institute1" [(ngModel)]="institute1" class="form-control">
+          <option value="University Of Moratuwa-Faculty of IT">University Of Moratuwa-Faculty of IT</option>
+          <option value="University Of Moratuwa-CSE">University Of Moratuwa-CSE</option>
+          <option value="University Of Colombo School of Computing">University Of Colombo School of Computing</option>
+          <option value="SLIIT">SLIIT</option>
+          <option value="NIBM">NIBM</option>
+          <option value="IIT">IIT</option>
+          <option value="Java Institute">Java Institute</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Start date :</label>
+      <div class="col-sm-10">
+      
+        <input type="date" name="sDate" ngModel required>
+      
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">End Date :</label>
+      <div class="col-sm-10">
+      
+        <input type="date" name="endDate" ngModel required>
+      
+
+      </div>
+    </div>
+ 
+
+
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Duration :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" name="duration" ngModel required>
+      </div>
+    </div>
+
+
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Github URL :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" name="github" ngModel required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">LinkedIn URL :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" name="linkedin" ngModel required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Facebook URL :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" name="facebook" ngModel required>
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Achivements :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" name="achivements" ngModel required>
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Other <br>Qulifications :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" name="other" ngModel required>
+
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" [disabled]="!personal.valid">Save</button>
+      </div>
+    </div>
+
+  </form>
+
+
+</div> -->
+
+<header class="intro-header">
+
+
+
+  <section class="view intro-2">
+    <div class="cardb">
+
+      <div class="black-text">
+
+        <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+          <div class="card wow fadeInRight" data-wow-delay="0.3s">
+            <div class="card-body">
+
+              <div class="text-center">
+                <h3 class="black-text"><i class="fa fa-user black-text"></i>&nbsp;Personal Details</h3>
+                <hr style="background-color: #ff7143">
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-4">
+
+                  <div class="md-form form-group">
+                    <!-- <input class="form-control" id="ex1" type="text" placeholder="Line 1" name="line1" ngModel required> -->
+                    <input mdbInputDirective class="form-control black-text" id="ex1" type="text" placeholder="Street "
+                      name="line1" ngModel required>
+                    <label class="black-text" for="ex1">Line 1</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+
+                  <div class="md-form form-group">
+                    <input mdbInputDirective class="form-control black-text" id="ex2" type="text" placeholder="City 1"
+                      name="line2" ngModel required>
+                    <label class="black-text" for="line2">Line 2</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+
+                  <div class="md-form form-group">
+                    <input mdbInputDirective class="form-control black-text" id="ex3" type="text" placeholder="City 2"
+                      name="line3" ngModel required>
+                    <label class="black-text" for="line3">Line 3</label>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="form-group row">
+                <label for="inputText3" class="col-sm-2 col-form-label black-text" style="color:rgb(255, 255, 255);">Institute
+                </label>
+                <div class="col-sm-10">
+                  <select id="institute1" name="institute1" [(ngModel)]="institute1" class="browser-default custom-select">
+                    <option selected>Select Your Institute</option>
+                    <option value="University Of Moratuwa-Faculty of IT">University Of Moratuwa-Faculty of IT</option>
+                    <option value="University Of Moratuwa-CSE">University Of Moratuwa-CSE</option>
+                    <option value="University Of Colombo School of Computing">University Of Colombo School of Computing</option>
+                    <option value="SLIIT">SLIIT</option>
+                    <option value="NIBM">NIBM</option>
+                    <option value="IIT">IIT</option>
+                    <option value="Java Institute">Java Institute</option>
+                  </select>
+                </div>
+              </div>
+
+
+
+
+              <div class="form-row">
+                <div class="col-md-6">
+
+                  <div class="md-form form-group">
+                    <!-- <input  mdbInputDirective class="form-control" type ="date" name="endDate" ngModel required> -->
+                    <input mdbInputDirective type="date" class="form-control black-text" name="sdDate" id="sDate"
+                      placeholder="01/01/2010" ngModel required>
+                    <label class="black-text" for="sDate">Start date</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="md-form form-group">
+                    <input mdbInputDirective type="date" class="form-control black-text" name="endDate" id="endDate"
+                      placeholder="01/06/2010" ngModel required>
+                    <label class="black-text" for="contact">End date</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="md-form form-group">
+                <input mdbInputDirective type="text" class="form-control black-text" name="duration" id="duration"
+                  placeholder="6" ngModel required>
+                <label class="black-text" for="duration">Duration</label>
+              </div> -->
+
+              <div class="form-row">
+                <div class="col-md-4">
+
+
+                  <div class="md-form form-group">
+                    <input mdbInputDirective type="text" class="form-control black-text" name="github" id="github"
+                      placeholder="github.com/mark" ngModel required>
+                    <label class="black-text" for="github">Github URL</label>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="md-form form-group">
+                    <input mdbInputDirective type="text" class="form-control black-text" name="linkedin" id="linkedin"
+                      placeholder="linkedin/mark" ngModel required>
+                    <label class="black-text" for="linkedin">LinkedIn URL</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="md-form form-group">
+                    <input mdbInputDirective type="text" class="form-control black-text" name="facebook" id="facebook"
+                      placeholder="facebook.com/mark" ngModel required>
+                    <label class="black-text" for="facebook">Facebook URL</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="md-form form-group">
+                <input mdbInputDirective type="text" class="form-control black-text" name="achivements" id="achivements"
+                  placeholder="CCNA" ngModel required>
+                <label class="black-text" for="achivements">Achivements</label>
+              </div> -->
+
+              <!-- <div class="md-form form-group">
+                <input mdbInputDirective type="text" class="form-control black-text" name="other" id="other"
+                  placeholder="CIMA" ngModel required>
+                <label class="black-text" for="other">Other Qulifications</label>
+              </div> -->
+              <button mdbBtn type="submit" color="deep-orange" class="btn btn-primary btn-md">save</button>
+              <!-- <button type="submit" class="btn btn-primary btn-md" [disabled]="!personal.valid">Save</button> -->
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</header>

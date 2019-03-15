@@ -1,0 +1,110 @@
+<mat-sidenav-container class="abc">
+  <mat-sidenav #sidenav mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true"
+    (mouseenter)="increase()" (mouseleave)="decrease()">
+
+    <mat-nav-list>
+
+      <mat-list-item>
+
+      </mat-list-item>
+      <mat-list-item>
+
+      </mat-list-item>
+      <mat-list-item *ngIf="sidenavWidth > 6">
+        <div><img height="200px" width="200px" src="{{url}}"></div>
+      </mat-list-item>
+      <mat-list-item routerLink="1" routerLinkActive="active">
+        <!-- <mat-icon mat-list-icon>link</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>Component 1</h5>
+          </div> -->
+      </mat-list-item>
+
+      <mat-list-item routerLink="2" routerLinkActive="active">
+        <!-- <mat-icon mat-list-icon>face</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>Component 2</h5>
+          </div> -->
+      </mat-list-item>
+
+  
+
+   
+
+
+
+
+      <!-- <mat-list-item routerLink="admin/1/profileheader" routerLinkActive="active">
+        <mat-icon mat-list-icon>show_chart</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Profile</h5>
+        </div>
+      </mat-list-item> -->
+
+      <mat-list-item routerLink="admin/1/adminstat" routerLinkActive="active">
+        <mat-icon mat-list-icon>show_chart</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Statistics</h5>
+        </div>
+      </mat-list-item>
+
+    
+
+
+      <mat-list-item routerLink="admin/1/notifi" routerLinkActive="active">
+        <mat-icon mat-list-icon>gamepad</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Notifications</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="admin/1/pending" routerLinkActive="active">
+        <mat-icon mat-list-icon>show_chart</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Register requests</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="admin/1/current" routerLinkActive="active">
+        <mat-icon mat-list-icon>list_alt</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>All Students</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="admin/1/noticeboard" routerLinkActive="active">
+        <mat-icon mat-list-icon>print</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Put Notice</h5>
+        </div>
+      </mat-list-item>
+
+
+      <!-- <mat-list-item routerLink="login" routerLinkActive="active">
+        <mat-icon mat-list-icon>print</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Print certificate</h5>
+        </div>
+      </mat-list-item> -->
+
+
+    
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+
+</mat-sidenav-container>

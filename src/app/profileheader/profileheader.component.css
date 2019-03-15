@@ -1,0 +1,24 @@
+.side{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .item {
+    width: 170px;
+    min-height: 170px;
+    max-height: auto;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+  }
+  

@@ -1,0 +1,154 @@
+<!--Main Navigation-->
+<!-- <header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark black">
+    
+ 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href='login'>Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href='current'>Current</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href='about'>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href='contact'>Contact Us </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link" href='signup'><i class="glyphicon glyphicon-user"data-toggle="modal" data-target="#basicExample" (click)="frame.show()" mdbWavesEffect></i> Signup</a>   
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href=''  data-toggle="modal" data-target="#modalLoginForm"><i class="glyphicon glyphicon-log-in" ></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>-->
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        
+        <div class="md-form mb-5">
+          <i class="fa fa-envelope prefix grey-text"></i>
+          <input type="email" id="defaultForm-email" [(ngModel)]="formEmail" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email"></label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fa fa-lock prefix grey-text"></i>
+          <input type="password" id="defaultForm-pass" [(ngModel)]="formPassword" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center" >
+        <button class="btn btn-default" (click)="onClickMe()" data-dismiss="modal">Login</button>
+      </div>
+      <!-- <div class="modal-footer d-flex justify-content-center" *ngIf="ifLoged">
+        <button class="btn btn-default" (click)="logout()" data-dismiss="modal">LogOut</button>
+      </div> -->
+    </div>
+  </div>
+</div> 
+
+<!--Main Navigation-->
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black">
+  <mdb-navbar-brand>
+    <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong></strong></a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active waves-light" mdbWavesEffect>
+        <a class="nav-link" href="intro"><strong>Home </strong><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" href="news"><strong>News</strong></a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect *ngIf="ifLoged">
+        <a class="nav-link" href="noticeboard"><strong>Notices</strong></a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect *ngIf="ifLoged">
+        <a class="nav-link" href="queAndAns"><strong>Q & A</strong></a>
+      </li>
+    </ul>
+    <form class="form-inline waves-light" mdbWavesEffect>
+      <!-- <div class="md-form mt-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div> -->
+      
+      
+
+    </form>
+    <ul class="navbar-nav nav-flex-icons">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href='signup'><i class="glyphicon glyphicon-user"data-toggle="modal" data-target="#basicExample" (click)="frame.show()" mdbWavesEffect></i><strong> SignUp</strong></a>   
+        </li> -->
+       
+        <li class="nav-item" *ngIf="ifLoged">
+          <div class="nav-link">  <strong> Hello, {{fName}}  </strong></div> 
+           </li>
+
+
+        <!-- <li class="nav-item" *ngIf="!ifLoged">
+          <a class="nav-link" href=''  data-toggle="modal" data-target="#modalLoginForm"><i class="glyphicon glyphicon-log-in" ></i> <strong>Login</strong></a>
+        </li> -->
+       
+     
+       
+        <!-- <li *ngIf="ifLoged">
+            {{fName}} {{lName}}
+        </li> -->
+ 
+        
+        <li *ngIf="ifAdmin">
+          <button mat-icon-button class="white-icon" [matMenuTriggerFor]="menu" >
+            <mat-icon *ngIf="ifHaveNotifi" matBadge={{count}} matBadgeColor="warn">notification_important</mat-icon>
+          </button>
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/admin/1/pending">
+              <mat-icon>dialpad</mat-icon>
+              
+              <span matBadge={{pending}} matBadgeOverlap="false">Registration requests</span>
+            </button>
+            <button mat-menu-item routerLink="/admin/1/notifi">
+              <mat-icon>voicemail</mat-icon>
+              <span matBadge={{techcount}} matBadgeOverlap="false">Technology requests</span>
+            </button>
+            
+          </mat-menu>
+          
+
+         
+      </li>
+
+      <li class="nav-item" *ngIf="ifLoged">
+        <a class="nav-link"  (click)="myFunc()"><i class="glyphicon glyphicon-log-in" ></i> <strong>Logout</strong></a>
+      </li>
+     
+      </ul>
+
+      
+  </links>
+</mdb-navbar>

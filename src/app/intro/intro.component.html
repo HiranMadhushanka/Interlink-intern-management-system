@@ -1,0 +1,83 @@
+<div class="xy">
+
+
+  <div class="full-bg-img mask rgba-gradient">
+    <div class="container flex-center">
+      <div class="d-flex align-items-center content-height w-100">
+        <div class="row flex-center pt-5 mt-3 w-100">
+          <div class="col-md-6 text-center text-md-left mb-5">
+            <div class="black-text">
+              <img src="../../assets//logo/2.png" style="width:35%; height:35%" alt="">
+              <br><br>
+              <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right
+                now! </h2>
+                <hr data-wow-delay="0.3s" style="background-color: #ff7143">
+              <h5 class="wow fadeInLeft" data-wow-delay="0.3s">Coming together is a begining , keeping together is progress and working together is success... 
+                <br>Welcome to the Interlink Intern Management System.</h5>
+              <br>
+              <!-- <a mdbBtn color="white" outline="true" class="wow fadeInLeft waves-light" data-wow-delay="0.3s"
+                mdbWavesEffect>Learn more</a> -->
+                <button mdbBtn type="button" routerLink="/signup" color="warning" outline="true" mdbWavesEffect>Sign Up Here</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-5 offset-xl-1">
+            <form #login="ngForm" (ngSubmit)="onSubmit(login)">
+            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+              <div class="card-body"> 
+                <!--Header-->
+                <div class="text-center">
+                  <h3 class="black-text"><i class="fa fa-user black-text"></i> Login </h3>
+                 <!-- <hr style="background-color: #ff7143"> -->
+                  <!-- <div class="hrline2"><hr class="hr-light mb-3 mt-4"></div> -->
+                </div>
+
+                <!--Body-->
+                <!-- <div class="md-form">
+                  <i class="fa fa-user prefix white-text"></i>
+                  <input type="text" id="form3" class="form-control" mdbInputDirective>
+                  <label for="form3">Your name</label>
+                </div> -->
+                <div class="md-form">
+                  <i class="fa fa-envelope prefix black-text"></i>
+                  <input type="text" id="form2" name="email" ngModel class="form-control" required [pattern]="emailPattern" mdbInputDirective>
+                  <label for="form2" class="black-text"  >Your email</label>
+                </div>
+
+                <div class="md-form">
+                  <i class="fa fa-lock prefix black-text"></i>
+                  <input type="password" id="form4" name="password"  [pattern]="psPatttern" required ngModel class="form-control" mdbInputDirective>
+                  <label for="form4" class="black-text">Your password</label>
+                </div>
+
+                <div class="text-center">
+                  <!-- <button mdbBtn color="indigo" class="waves-light" mdbWavesEffect>Sign up</button> -->
+                  <button mdbBtn type="submit" color="deep-orange" mdbWavesEffect>Login</button>
+                  <br>
+                  <a href="/sendPassword">Forget password?</a>
+                <hr style="background-color: #ff7143">
+
+                  
+                  <div class="inline-ul text-center d-flex justify-content-center">
+                    <a class="icons-sm tw-ic px-4"><i class="fa fa-twitter black-text"></i></a>
+                    <a class="icons-sm li-ic px-4"><i class="fa fa-linkedin black-text"> </i></a>
+                    <a class="icons-sm ins-ic px-4"><i class="fa fa-instagram black-text"> </i></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="abcd">
+  <h1></h1>
+  <h1></h1>
+  
+  
+</div>
+</div>
+

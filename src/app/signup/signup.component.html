@@ -1,0 +1,175 @@
+<div class="xy">
+  <h1></h1>
+  <div class="x">
+  <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm" >
+    <div class="card wow fadeInRight" data-wow-delay="0.3s">
+      <div class="card-body">
+  
+        <div class="text-center">
+          <h3 class="black-text"><i class="fa fa-user black-text"></i> Sign Up </h3>
+          <hr  style="background-color: #ff7143">
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+  
+            <label for="inputText3" class="col-sm-6 col-form-label">I am a</label>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input " type="radio" name="gridRadios" [ngModel]="gridRadios" id="gridRadios1"
+                  value="student" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Student
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" [ngModel]="gridRadios" id="gridRadios2"
+                  value="supervisor">
+                <label class="form-check-label" for="gridRadios2">
+                  Supervisor
+                </label>
+              </div>
+  
+            </div>
+          </div>
+        </fieldset>
+  
+  
+  
+        <!-- <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-10 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="yourname@gmail.com" ngModel
+            required [pattern]="emailPattern">
+        </div>
+      </div> -->
+  
+  
+  
+        <!-- Material input -->
+        <div class="md-form form-group">
+          <input mdbInputDirective type="email" class="form-control" id="inputEmail4MD" name="email" placeholder="Email" ngModel
+            required [pattern]="emailPattern">
+          <label for="inputEmail4MD">Email</label>
+        </div>
+  
+  
+  
+        
+      <!-- <div class="form-group row">
+        <label for="inputText3" class="col-sm-10 col-form-label">First Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText2" name="fName" placeholder="ex:Alex" ngModel required>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-10 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="lName" placeholder="ex:Nowty" ngModel required>
+        </div>
+      </div> -->
+  
+        <div class="form-row">
+          <div class="col-md-6">
+        
+            <div class="md-form form-group">
+              <input mdbInputDirective type="text" class="form-control" id="inputCityMD" name="fName" placeholder="First name"
+                ngModel required>
+              <label for="inputCityMD">First Name</label>
+            </div>
+          </div>
+         
+          <div class="col-md-6">
+         
+            <div class="md-form form-group">
+              <input mdbInputDirective type="text" class="form-control" id="inputZipMD" name="lName" placeholder="Last name"
+                ngModel required>
+              <label for="inputZipMD">Last Name</label>
+            </div>
+          </div>
+        
+        </div>
+  
+  
+  
+  
+  
+        <!-- <div class="form-group row">
+        <label for="inputText3" class="col-sm-10 col-form-label">Contact No</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText4" name="contact" placeholder="ex:07x-xxxxxxx" ngModel
+            required [pattern]="contactPatttern">
+        </div>
+      </div> -->
+  
+  
+        <div class="md-form form-group">
+          <input mdbInputDirective type="email" class="form-control" name="contact" id="contact" placeholder="07x-xxxxxxx"
+            ngModel required [pattern]="contactPatttern">
+          <label for="contact">Mobile No</label>
+        </div>
+  
+  
+  
+        <!-- <div>
+          <div class="form-group row ">
+            <label for="inputPassword3" class="col-sm-10 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="********"
+                ngModel required>
+            </div>
+          </div>
+  
+  
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-10 col-form-label">Re-enter Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword4" name="cPassword" placeholder="********"
+                ngModel required>
+            </div>
+          </div>
+  
+        </div> -->
+  
+  
+  
+        <div class="row">
+      
+          <div class="col-md-6">
+          
+            <div class="md-form form-group">
+              <input mdbInputDirective type="password" class="form-control" id="inputPS" [pattern]="psPatttern" name="password" placeholder="********" ngModel required>
+              <label for="inputPS" >Password</label>
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+      
+            <div class="md-form form-group">
+              <input mdbInputDirective type="password" class="form-control" id="inputPSA" [pattern]="psPatttern"  name="cPassword" placeholder="********" ngModel required>
+              <label for="inputPSA"  >Password Again</label>
+            </div>
+          </div>
+        
+        </div>
+    
+      
+  
+  
+        <!-- <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-info" [disabled]="!signupForm.valid">Register</button>
+          </div>
+        </div> -->
+  
+        <button type="submit" class="btn btn-primary btn-md" [disabled]="!signupForm.valid">Register</button>
+        <!-- <button mdbBtn type="submit" color="deep-orange" [disabled]="!signupForm.valid" mdbWavesEffect>Register</button> -->
+      </div>
+    </div>
+  </form>
+  
+  
+  </div>
+  
+  <h1>.</h1>
+  </div>

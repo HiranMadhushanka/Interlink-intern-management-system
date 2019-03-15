@@ -1,0 +1,286 @@
+<!-- <div class="container">
+    <div *ngIf="ifStudent">  
+    <h2>Personal Details</h2> <br>
+  
+  
+    <form (ngSubmit)=" onSubmit(edit)" #edit="ngForm">
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText2" name="fName" placeholder="ex:Alex" [(ngModel)]="student.fname"
+            required>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="lName" placeholder="ex:Nowty" [(ngModel)]="student.lname"
+            required>
+        </div>
+      </div>
+  
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Contact No</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText4" name="contact" placeholder="ex:07x-xxxxxxx" [(ngModel)]="student.contact"
+            required>
+        </div>
+      </div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Github URL :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="github" [(ngModel)]="student.github" required>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">LinkedIn URL :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="linkedin" [(ngModel)]="student.linkedin" required>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Facebook URL :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="facebook" [(ngModel)]="student.facebook" required>
+        </div>
+      </div>
+  
+  
+  
+  
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Other <br>Qulifications :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="other" [(ngModel)]="student.qulifications"
+            required>
+  
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </form>
+    </div>
+    <br>
+    <div *ngIf="!ifStudent">  
+    <h3> Soft Skills evaluation (Edit by supervisors Only)</h3>
+    <br>
+  
+  
+    <form (ngSubmit)=" onSubmit1(skilledit)" #skilledit="ngForm">
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Skill name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="skillname" placeholder="Enter soft skill name"
+            ngModel required>
+  
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Skill rate</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText2" name="skillrate" placeholder="Rate 1 to 5" ngModel
+            required>
+        </div>
+      </div>
+  
+  
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" [disabled]="!personal.valid">Save Soft Skills</button>
+        </div>
+      </div>
+    </form>
+  
+    <br>
+    <h3> Tech Skills evaluation (Edit by supervisors Only)</h3>
+    <br>
+  
+    <form (ngSubmit)=" onSubmit2(techskilledit)" #techskilledit="ngForm">
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Skill name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText3" name="skillname" placeholder="Enter tech skill name"
+            ngModel required>
+  
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Skill rate</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputText2" name="skillrate" placeholder="Rate 1 to 5" ngModel
+            required>
+        </div>
+      </div>
+  
+  
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" [disabled]="!personal.valid">Save Tech Skills</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div> -->
+
+  
+
+  <form (ngSubmit)=" onSubmit(edit)" #edit="ngForm">
+      <div class="card wow fadeInRight" data-wow-delay="0.3s">
+        <div class="card-body">
+    
+          <div class="text-center">
+            <h3 class="black-text"><i class="fa fa-user black-text"></i>&nbsp;Edit Details</h3>
+            <hr style="background-color: #ff7143">
+          </div>
+    
+    <app-profileheader></app-profileheader>
+    <br>
+    
+          <div class="form-row">
+            <div class="col-md-6">
+          <div class="md-form form-group">
+            <input mdbInputDirective type="text" class="form-control" name="fname" id="duration" placeholder="6" [(ngModel)]="student.fname"
+            required>
+            <label for="duration">First Name</label>
+          </div>
+          </div>
+          <div class="col-md-6">
+    
+            <div class="md-form form-group">
+              <input mdbInputDirective type="text" class="form-control" name="lname" id="duration" placeholder="6" [(ngModel)]="student.lname"
+              required>
+              <label for="duration">Last Name</label>
+            </div>
+          </div></div>
+    
+    
+          
+    
+            <div class="md-form form-group">
+              <input mdbInputDirective type="text" class="form-control" name="contact" id="duration" placeholder="6" [(ngModel)]="student.contact"
+              required>
+              <label for="duration">Contact no</label>
+            </div>
+          
+            <!-- <div class="md-form form-group">
+              <input mdbInputDirective type="text" class="form-control" name="password" id="duration" placeholder="6" [(ngModel)]="student.password"
+              required>
+              <label for="duration">Password</label>
+            </div>
+           -->
+    
+    
+    
+    <!-- 
+          <div class="form-row">
+            <div class="col-md-4">
+    
+              <div class="md-form form-group">
+              
+                <input mdbInputDirective class="form-control" id="ex1" type="text" placeholder="Line 1" name="line1"
+                  ngModel required>
+                <label for="ex1">Line 1</label>
+              </div>
+            </div>
+    
+            <div class="col-md-4">
+    
+              <div class="md-form form-group">
+                <input mdbInputDirective class="form-control" id="ex2" type="text" placeholder="Line 2" name="line2"
+                  ngModel required>
+                <label for="line2">Line 2</label>
+              </div>
+            </div>
+    
+            <div class="col-md-4">
+    
+              <div class="md-form form-group">
+                <input mdbInputDirective class="form-control" id="ex3" type="text" placeholder="Line 3" name="line3"
+                  ngModel required>
+                <label for="line3">Line 3</label>
+              </div>
+            </div>
+    
+          </div> -->
+    
+    
+    
+        
+    
+    
+    
+      
+    
+        
+    
+          <div class="form-row">
+            <div class="col-md-4">
+    
+    
+              <div class="md-form form-group">
+                <input mdbInputDirective type="text" class="form-control" name="github" id="github" placeholder="6"  [(ngModel)]="student.github"
+                  required>
+                <label for="github">Github URL</label>
+              </div>
+    
+            </div>
+            <div class="col-md-4">
+              <div class="md-form form-group">
+                <input mdbInputDirective type="text" class="form-control" name="linkedin" id="linkedin" placeholder="6"
+                [(ngModel)]="student.linkedin" required>
+                <label for="linkedin">LinkedIn URL</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="md-form form-group">
+                <input mdbInputDirective type="text" class="form-control" name="facebook" id="facebook" placeholder="6"
+                [(ngModel)]="student.facebook" required>
+                <label for="facebook">Facebook URL</label>
+              </div>
+            </div>
+          </div>
+    
+          <!-- <div class="md-form form-group">
+            <input mdbInputDirective type="text" class="form-control" name="achivements" id="achivements" placeholder="6"
+              ngModel required>
+            <label for="achivements">Achivements</label>
+          </div> -->
+<!--     
+          <div class="md-form form-group">
+            <input mdbInputDirective type="text" class="form-control" name="other" id="other" placeholder="6" [(ngModel)]="student.qulifications"
+              required>
+            <label for="other">Other Qulifications</label>
+          </div> -->
+  
+          <button mdbBtn type="submit" color="deep-orange">save</button>
+          <!-- <button  type="button" color="deep-orange">save</button> -->
+         
+          <!-- <button type="submit" class="btn btn-primary btn-md" [disabled]="!personal.valid">Save</button> -->
+        </div>
+      </div>
+    </form>

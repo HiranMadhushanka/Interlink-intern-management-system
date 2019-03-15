@@ -1,0 +1,24 @@
+<div *ngIf="!isStudent">
+  <app-put-notice></app-put-notice>
+</div>
+
+
+
+
+<div class="abc" *ngFor="let noticee of noticeBoard" >
+<mdb-card>
+  <div class="abc1">
+      <h2 style="text-align:center; color:rgb(255, 63, 5);"><b>{{noticee.topic}}</b></h2>
+      <h4><b>{{noticee.content}}</b></h4>
+      <h4><b> <i class="fa fa-map-marker" aria-hidden="true"></i> Location : <span style="color:rgb(47, 255, 5);">{{noticee.location}}</span></b></h4>
+      <h4><b><i class="fa fa-clock-o" aria-hidden="true"></i>Date & Time : <span style="color:rgb(5, 143, 255);">{{noticee.time}}</span></b></h4>
+  <h4><i class="fa fa-user" aria-hidden="true"></i> <b> By : </b> <b><span style="color:rgb(5, 255, 255);">  {{noticee.sendername}}</span></b></h4>
+  <h6>{{noticee.datetime}}</h6>
+ 
+ 
+  
+  <!-- <h4><b>{{noticee.topic}}</b></h4> -->
+</div>
+</mdb-card>
+<br>
+</div>

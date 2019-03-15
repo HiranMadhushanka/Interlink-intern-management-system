@@ -1,0 +1,27 @@
+
+<div class="input-default-wrapper mt-3">
+
+    <span class="input-group-text mb-3" id="input1">Upload</span>
+  
+    <input type="file" id="file-with-current" class="input-default-js" (change)="onFileSelected($event)">
+  
+    <label class="label-for-default-js rounded-right mb-3" for="file-with-current"><span class="span-choose-file">Choose
+        file</span>
+  
+      <div class="float-right span-browse">Browse</div>
+  
+    </label>
+  
+  </div>
+  <div class="progress" *ngIf="ifPo">
+    <progress class="progress-bar" value={{precentage}} min="0" max="100" id="uploader">0%</progress>
+  </div>
+ 
+<br>
+
+<div *ngFor="let files of fileofstudent">
+    <mat-card><a href="{{files.link}}">{{files.filename}}</a></mat-card>
+    <br>
+</div>
+<!-- <div *ngIf="f"><a href="{{url}}">{{file.name}}</a></div> -->
+

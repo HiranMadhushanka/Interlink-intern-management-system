@@ -1,0 +1,180 @@
+<!-- 
+<form (ngSubmit)=" onSubmit()" #personal="ngForm">
+  <div id="content" #content>
+  
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Email Address:</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.email}}</label>
+  </div>
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">First Name:</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.fname}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Last Name :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.lname}}</label>
+  </div>
+
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Contact No :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.contact}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Home Address :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.address.line1}}</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.address.line2}}</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.address.line3}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Institute :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.institute1}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Duration:</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.duration}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Start date:</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.sDate }}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Github URL :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.github}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">LinkedIn URL :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.linkedin}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Facebook URL :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.facebook}}</label>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputText3" class="col-sm-2 col-form-label">Other Qulifications :</label>
+    <label for="inputText3" class="col-sm-2 col-form-label">{{student.qulifications}}</label>
+  </div>
+</div>
+
+  <h2 style="text-align:center;">Soft Skills(Done by supervisors)</h2>
+  <div *ngFor="let studentskill of studentskills" >
+    <star-rating [starType]="'svg'" labelPosition="top" [readOnly]="ifStudent"  labelText={{studentskill.skillname}} rating={{studentskill.skillrate}}></star-rating>
+</div>
+
+<h2 style="text-align:center;">Tech Skills(Done by supervisors)</h2>
+<div *ngFor="let studenttechskill of studenttechskills" >
+  <star-rating [starType]="'svg'" labelPosition="top" [readOnly]="ifStudent"  labelText={{studenttechskill.skillname}} rating={{studenttechskill.skillrate}}></star-rating>
+</div>
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary" [disabled]="!personal.valid">Edit</button>
+    </div>
+  </div>
+
+</form>
+
+ <button type="button" class="btn btn-primary print" (click)="downloadPDF()">Print</button> -->
+
+<!-- <button class="btn btn-primary print"  (click)="getScreenShot()">Print</button>  -->
+
+
+<form (ngSubmit)=" onSubmit()" #personal="ngForm">
+  <div class="card wow fadeInRight" data-wow-delay="0.3s">
+    <div class="card-body">
+
+      <div class="text-center">
+        <h3 class="dark-text"><i class="fa fa-user dark-text"></i> Timeline </h3>
+        <hr style="background-color: #ff7143">
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>face</mat-icon>
+        </div>
+        <div class="col-sm-6 col-form-label one dark-text"><label for="inputText3" class="dark-text">{{student.fname}}
+            &nbsp;{{student.lname}}</label></div>
+      </div>
+      <div class="form-group row dark-text">
+        <div class="col-sm-1 col-form-label one">
+          <mat-icon class="dark-text" mat-list-icon>email</mat-icon>
+        </div>
+        <div class="col-sm-6 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.email}}</label></div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>phone</mat-icon>
+        </div>
+        <div class="col-sm-6 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.contact}}</label></div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>home</mat-icon>
+        </div>
+        <div class="col-sm-11 col-form-label one dark-text"><label for="inputText3" class="dark-text">{{student.address.line1}} ,
+            {{student.address.line2}} , {{student.address.line3}}</label></div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>school</mat-icon>
+        </div>
+        <div class="col-sm-11 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.institute1}}</label></div>
+      </div>
+
+      <!-- <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>history</mat-icon>
+        </div>
+        <div class="col-sm-3 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.duration}}</label></div>
+      </div> -->
+
+      <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon><img src="../../assets/logo/github-logo.png"></mat-icon>
+        </div>
+        <div class="col-sm-3 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.github}}</label></div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>linkdin</mat-icon>
+        </div>
+        <div class="col-sm-3 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.linkedin}}</label></div>
+      </div>
+      <!-- <div class="form-group row">
+        <div class="col-sm-1 col-form-label one dark-text">
+          <mat-icon class="dark-text" mat-list-icon>new_releases</mat-icon>
+        </div>
+        <div class="col-sm-3 col-form-label one dark-text"><label for="inputText3" class="dark-text"> {{student.qulifications}}</label></div>
+      </div>
+    -->
+
+      <!-- <div class="form-group row">
+        <mat-list-item routerLink="login" routerLinkActive="active">
+          <mat-icon class="x" mat-list-icon>offline_bolt</mat-icon>
+      
+          <div class="sidenav-item">
+            <h5>Request Tec</h5>
+          </div>
+        </mat-list-item>
+      </div> -->
+
+
+
+      <div class="text-center">
+        <!-- <button mdbBtn color="indigo" class="waves-light" mdbWavesEffect>Sign up</button> -->
+        <hr class="hr-light mb-3 mt-4">
+      </div>
+
+    </div>
+  </div>
+</form>

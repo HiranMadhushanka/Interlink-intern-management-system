@@ -1,0 +1,140 @@
+<!-- <table class="table table-hover mytable "  style="border:solid;border-color: teal; color:black;background-color:white" >
+    <thead class="thead-dark">
+    </thead>
+    <tbody>
+      <tr>
+        
+        <th>email</th>
+        <th>index</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let studentdetails of students; index as i">
+          <td>{{studentdetails.email}}</td>
+          <td>{{i}}</td>
+          <td>
+            <form class="btn btn-info"  (ngSubmit)="onsubmit(studentdetails.id)" #formone="ngForm">
+              <button type="submit" class="btn btn-default">View</button>
+             </form>
+            </td> 
+            <td>
+                <form class="btn btn-info"  (ngSubmit)="ondelete(studentdetails.id)" #formtwo="ngForm">
+                  <button type="submit" class="btn btn-default">Delete</button>
+                 </form>
+                </td> 
+      </tr>
+    </tbody>
+  
+</table> -->
+<!-- <div id="content" #content> -->
+  <!-- <table class="table table-hover mytable " style="border:solid;border-color: teal; color:black;background-color:white">
+    <thead class="thead-dark">
+      <tr>
+        <th>email</th>
+        <th>name</th>
+        <th>lstname</th>
+        <th>index</th>
+        <th>view</th>
+        <th *ngIf="ifAdmin">delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let studentdetails of students; index as i">
+        <td>{{studentdetails.email}} </td>
+        <td>{{studentdetails.fname}} </td>
+        <td>{{studentdetails.lname}} </td>
+        <td>{{i}}</td>
+        <td>
+          <form class="x" (ngSubmit)="onsubmit(studentdetails.id)" #formone="ngForm">
+            <button type="submit" class="btn btn-default">View</button>
+          </form>
+        </td>
+        <td *ngIf="ifAdmin">
+          <form class="x" (ngSubmit)="ondelete(studentdetails.id)" #formtwo="ngForm">
+            <button type="submit" class="btn btn-deep-orange">Delete</button>
+         
+          </form>
+        </td>
+      </tr>
+    </tbody>
+
+  </table> -->
+
+  <!-- <img src={{url}} alt="..." height="200px" width="200px" class="img-thumbnail">
+  <input type="file" value="upload" id="fileButton" (change)="onFileSelected($event)" /> -->
+<!-- </div> -->
+
+
+  
+<!-- <button class="btn btn-primary print" (click)="getScreenShot()">Print</button> -->
+
+
+
+<div id="content" #content>
+
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="md-form">
+        <input type="text" [(ngModel)]="searchText" class="form-control" id="search" mdbInputDirective>
+        <label for="search">Search Student by name/email</label>
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  
+  <table mdbTable class="z-depth-1 width-fixed">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements; let i = index" scope="col">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let el of elements; let i = index">
+        <th scope="row">{{el.id}}</th>
+        <td >{{el.first}}</td>
+        <td>{{el.last}}</td>
+        <td>{{el.handle}}</td>
+        <td>
+            <form class="x" (ngSubmit)="onsubmit(el.idx)" #formone="ngForm">
+              <button type="submit" class="btn btn-default">View</button>
+            </form>
+          </td>
+          <td *ngIf="ifAdmin">
+            <form class="x" (ngSubmit)="ondelete(el.idx)" #formtwo="ngForm">
+              <!-- <button type="submit" class="btn btn-deep-orange">Delete</button> -->
+              <button  class="btn btn-deep-orange" (click)="openAddFileDialog()">Delete</button>
+           
+            </form>
+          </td>
+      </tr>
+    </tbody>
+  </table></div>
+  
+  
+  
+  
+  
+  <!-- zzzzzzzzzzzzzzz -->
+  
+  
+  
+  <!-- <div class="basic-container">
+    <h2>File Tree</h2>
+    <ul>
+      <li *ngFor="let file of files">
+        {{file.name}}
+      </li>
+      <button (click)="openAddFileDialog()">Add file</button>
+    </ul>
+  </div> -->
+  
+  <!-- <div class="basic-container">
+    <h2>File Tree</h2>
+    <ul>
+      
+      <button (click)="openAddFileDialog()">Add file</button>
+    </ul>
+  </div> -->
+  
+  

@@ -1,0 +1,72 @@
+input.ng-invalid.ng-dirty{
+    border-bottom-color:red;
+    box-shadow: 1px 1px 1px 1px red;
+}
+.card-small {
+  
+    margin-left: auto;
+    margin-right: auto;
+    
+   }
+
+   .canvasContainer {
+    margin-left: auto;
+    margin-right: auto;
+ 
+        }
+
+        #canvas{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+.canvasContainer1{
+     margin-left: auto;
+     margin-right: auto;
+         
+    }
+        
+ #canvas1{
+     margin-left: auto;
+     margin-right: auto;
+         }
+
+         .canvasContainer2{
+            margin-left: auto;
+            margin-right: auto;
+                
+           }
+               
+        #canvas2{
+            margin-left: auto;
+            margin-right: auto;
+                }
+                form { 
+                    margin: 0 auto; 
+                    width:250px;
+                    }
+ .hasanga{
+ width:600px;
+margin-left: auto;
+ margin-right: auto;
+ margin-bottom: auto;
+ margin-top: auto;             
+          }
+
+          .hasanga1{
+            width:600px;
+           margin-left: 2;
+            margin-right: 2;
+            margin-bottom: 2;
+            margin-top: 2;             
+                     }
+
+                     .hasanga2{
+                        width:600px;
+                       margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: auto;
+                        margin-top: auto;             
+                                 }
+
+                                 

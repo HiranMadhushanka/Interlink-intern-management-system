@@ -1,0 +1,35 @@
+<div id="content" class="full" #content>
+    <!-- <img src="https://ichef.bbci.co.uk/news/660/media/images/69450000/jpg/_69450084_138017387.jpg" alt=""> -->
+
+
+    <div class="certificate">
+        <h1><strong>Certificate</strong></h1>
+    </div><br>
+
+    <h2>Name : {{student.fname}}&nbsp;{{student.lname}}</h2><br>
+    <h2>Institute : {{student.institute1}}</h2><br>
+    <h2>Duration : {{student.duration}} months</h2><br>
+
+    <h4><u>Recommendations</u></h4><br>
+    <div *ngFor="let recomendDetails of recommendationForthisStud">
+        <h4>{{recomendDetails.content}}</h4>
+
+    </div><br>
+    <h4><u>Technologies done by student</u></h4><br>
+    <div *ngFor="let tech of techno">
+        <h3>{{tech.technology}}</h3>
+
+    </div><br>
+    <h4><u>Soft Skills</u></h4><br>
+    <div *ngFor="let techskill of studentskills">
+       <h3> {{techskill.name}} : 
+        {{techskill.type}} </h3>
+    </div><br>
+    <h4><u>Tech Skills</u></h4><br>
+    <div *ngFor="let techskill of studenttechskills">
+       <h3> {{techskill.name}} :
+        {{techskill.type}}</h3>
+
+    </div>
+</div>
+<button type="submit" (click)="downloadPDF()">Print</button>

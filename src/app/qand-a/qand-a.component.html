@@ -1,0 +1,28 @@
+
+
+    <button mdbBtn color="primary" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect>
+     Ask Your Burning Question
+    </button>
+    
+    <div class="" mdbCollapse #test="bs-collapse">
+      <!-- <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p> -->
+
+        <form (ngSubmit)=" onSubmit(noticeEdit)" #noticeEdit="ngForm">
+          <div>
+                <div class="md-form">
+                  <i class="fa fa-pencil prefix"></i>
+                  <textarea type="text" id="form8" class="md-textarea form-control" name="content" mdbInputDirective ngModel required></textarea>
+                  <label for="form8">Your Question</label>
+                </div>
+
+              </div>
+
+              
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit Question</button>
+            </div>
+          </div>
+        </form>
+    </div>

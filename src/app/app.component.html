@@ -1,0 +1,40 @@
+<!-- <particles [style]="style" [width]="width" [height]="height" [params]="params" [params]="color" ></particles>  -->
+
+<app-nav-bar></app-nav-bar>
+
+
+<router-outlet></router-outlet>
+<div *ngIf="isLoged">
+
+  <div *ngIf="isStudent">
+    <app-sidenav></app-sidenav>
+  </div>
+
+  <div *ngIf="isAdmin">
+
+    <app-nav-admin></app-nav-admin>
+  </div>
+
+  
+  <div *ngIf="isSupervisor">
+    <app-nav-supv></app-nav-supv>
+  </div>
+</div>
+
+
+<footer class="page-footer font-small special-color-dark ">
+
+    
+    
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href=" "> All Rights Reserved</a>&nbsp;&nbsp;
+    <img src="./../assets/logo/2.png" height="5%" width="5%">&nbsp;&nbsp;
+    <img src="http://apadm.org/cms/wp-content/uploads/2014/11/99xT.png" height="7%" width="7%">
+  
+  </div>
+
+
+</footer>
+<!-- Footer -->
+
+

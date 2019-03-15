@@ -1,0 +1,81 @@
+
+<!-- <app-profileheader></app-profileheader> -->
+<div class="container">
+  <!-- <div class="jumbotron"> -->
+    <h2>Settings</h2> <br>
+
+    <form #settings="ngForm" (ngSubmit)="onSubmit(settings)"> 
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Supervisor :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" placeholder="ex:Charlie" name="supervisor" ngModel> 
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Primary Project :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputText3" placeholder="ex:interlink" name="project" ngModel>
+      </div>
+    </div>
+   
+<!-- 
+    <div class="form-group row">
+      <label for="inputText3" class="col-sm-2 col-form-label">Other Projects :<br> <h6>(No of Projects - {{projectCount}}) </h6></label>
+      <div class="col-sm-10">
+        <div class="form-group row">
+          <div class="life-container" *ngFor="let otherProject of otherProjects">
+            &nbsp;&nbsp; &nbsp;&nbsp; {{otherProject}}
+          </div>
+          <div class="col-xs-6">
+            <input class="form-control" id="ex3" type="text" [(ngModel)]="otherProjectName" name="other_project" ngModel>
+          </div>
+          <div class="col-xs-2">
+            <input type="submit" class="btn btn-primary" value="Add new" (click)="addProject()" >
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+    <div class="form-group row">
+        <label for="inputText3" class="col-sm-2 col-form-label">Technologies :</label>
+        <div class="col-sm-10">
+          <div class="form-group row">
+            <div class="life-container" *ngFor="let technology of technologys">
+              &nbsp;&nbsp; &nbsp;&nbsp; {{technology}}
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" id="ex3" type="text" [(ngModel)]="technologyName" name="technology" ngModel>
+            </div>
+            <div class="col-xs-2">
+              <input type="submit" class="btn btn-primary" value="Add new" (click)="addTechnology()">
+            </div>
+          </div>
+        </div>
+      </div>
+ -->
+ <!-- <div class="checkbox">
+    <label><input type="checkbox" value="angular" name="angular" ngModel>Angular</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="node" name="node" (ngModel)="x">Node</label>
+  </div> -->
+
+      <input type="submit" class="btn btn-primary" value="Save all" >
+
+    </form>
+
+
+     
+
+       
+
+  
+
+   
+  <!-- </div> -->
+</div>
+<!-- <app-fileuploader></app-fileuploader> -->

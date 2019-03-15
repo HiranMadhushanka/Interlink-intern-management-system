@@ -1,0 +1,140 @@
+<!-- <div style="text-align: center;">
+  <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#fullHeightModalRight"><i class="fa fa-plus-square"
+      aria-hidden="true"></i> ADD Notice</button>
+</div>
+
+<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+
+  <div class="modal-dialog modal-side modal-top-right" role="document">
+   
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">Put Note</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body mx-3">
+
+          <form (ngSubmit)=" onSubmit(noticeEdit)" #noticeEdit="ngForm">
+            <div>
+              <div class="md-form mb-5">
+
+                <i class="fa fa-book"></i>
+
+                <input type="text" id="topic" name="topic" placeholder="Topic of Notice" ngModel required>
+
+              </div>
+              <div class="md-form mb-5">
+                <i class="fa fa-map-marker"></i>
+
+                <input type="text" id="location" name="location" placeholder="Location" ngModel required>
+
+              </div>
+              <div class="md-form mb-5">
+
+
+                <i class="fa fa-clock-o"></i>
+
+                <input type="text" id="time" name="time" placeholder="time" ngModel required>
+
+              </div>
+
+
+              <div class="md-form">
+
+
+                <i class=""></i>
+
+                <textarea type="text" id="form10" name="content" rows="3" ngModel required></textarea>
+
+              </div>
+
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Put Note</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div> -->
+  <!-- Full Height Modal Right -->
+
+  <button style="align-items: center;" mdbBtn color="primary" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect >
+      Add Notice
+    </button>
+    
+    <div class="" mdbCollapse #test="bs-collapse">
+  
+
+        <form (ngSubmit)=" onSubmit(noticeEdit)" #noticeEdit="ngForm">
+            <div>
+              <!-- <div class="md-form">
+
+                <i class="fa fa-book"></i>
+
+                <input type="text" id="topic" name="topic" placeholder="Topic of Notice" ngModel required>
+
+              </div> -->
+
+              <div class="md-form">
+                  <input mdbInputDirective type="text" id="form1" class="form-control" name="topic"  ngModel >
+                  <label for="form1" class="">Topic of Notice</label>
+                </div>
+              <!-- <div class="md-form">
+                <i class="fa fa-map-marker"></i>
+
+                <input type="text" id="location" name="location" placeholder="Location" ngModel required>
+
+              </div> -->
+
+              <div class="md-form">
+                  <input mdbInputDirective type="text" id="form1" class="form-control" name="location"  ngModel >
+                  <label for="form1" class="">location</label>
+                </div>
+
+              <!-- <div class="md-form">
+
+
+                <i class="fa fa-clock-o"></i>
+
+                <input type="text" id="time" name="time" placeholder="time" ngModel required>
+
+              </div> -->
+
+              <div class="md-form">
+                  <input mdbInputDirective type="text" id="form1" class="form-control" name="time"  ngModel >
+                  <label for="form1" class="">Date & Time</label>
+                </div>
+
+
+              <!-- <div class="md-form">
+
+
+                <i class=""></i>
+
+                <textarea type="text" id="form10" name="content" rows="3" ngModel required></textarea>
+
+              </div> -->
+              <div class="md-form">
+                  <input mdbInputDirective type="text" id="form1" class="form-control" name="content"  ngModel >
+                  <label for="form1" class="">Description</label>
+                </div>
+
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Put Note</button>
+              </div>
+            </div>
+          </form>
+    </div>
